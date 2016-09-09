@@ -95,5 +95,13 @@ constraint fk_chequeo_vaca foreign  key(id_animal) references animal(id_animal)
 
 );
 
+create table lotePollos(
+
+cantidad int,
+numeroLotePollos int,
+fechaIngreso varchar(15)
+
+);
+
 
 
