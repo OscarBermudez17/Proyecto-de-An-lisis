@@ -1,0 +1,215 @@
+[33mcommit 7f9aee9a0edbda7d63e31e4961ebecec3bd10a34[m
+Author: Oscar Bermudez Garcia <obermudezg18@gmail.com>
+Date:   Mon Oct 24 19:48:13 2016 -0600
+
+    cambios
+
+[33mcommit a5a86b2d51a66b8d2106fb785682cbdf8e682e2c[m
+Merge: 03caca1 586152e
+Author: Oscar Bermudez Garcia <obermudezg18@gmail.com>
+Date:   Mon Oct 24 19:48:04 2016 -0600
+
+    Eliminación de problemas
+    
+    Se eliminaron los casos de usos textuales de daban problemas
+
+[33mcommit 03caca1ea2bf481f3095aaf65f6258583f20ec1c[m
+Author: Oscar Bermudez Garcia <obermudezg18@gmail.com>
+Date:   Mon Oct 24 19:04:43 2016 -0600
+
+    cambios_prueba
+
+[33mcommit 251551a3bad8ffe4180f035281dc9aa9816a72c6[m
+Author: Oscar Bermudez Garcia <obermudezg18@gmail.com>
+Date:   Mon Oct 24 18:57:57 2016 -0600
+
+    cambios
+
+[33mcommit 586152e99ccec034cf622c0327d212bcc3bf2e9c[m
+Author: michelleaccr <michecj18@gmail.com>
+Date:   Tue Oct 11 10:31:12 2016 -0600
+
+    DiagramasSecuencia
+    
+    RealizarVenta
+    AgregarProductos
+
+[33mcommit 84a239d972770ee4ae2cf9632b8b2c5e3ca7bc6a[m
+Author: michelleaccr <michecj18@gmail.com>
+Date:   Tue Oct 11 08:55:43 2016 -0600
+
+    Entrega 11-10-16
+    
+    Casos de uso corregidos
+
+[33mcommit 3e2d8ecb9071a912becab65c6636701e951d167c[m
+Author: JimmyMQ <jimmymq24@gmail.com>
+Date:   Fri Oct 7 14:06:15 2016 -0600
+
+    modificaciones
+
+[33mcommit 9b1d439f16fe07643d60211499158c4e52c07fd5[m
+Author: JimmyMQ <jimmymq24@gmail.com>
+Date:   Tue Sep 6 10:14:31 2016 -0600
+
+    Modificaciones
+
+[33mcommit 6117384d0a000e9fb6bfb81e22505c01b469b93a[m
+Author: Oscar Bermudez Garcia <obermudezg18@gmail.com>
+Date:   Fri Oct 7 13:50:52 2016 -0600
+
+    cambios/07/10/2016
+
+[33mcommit efcb1a58b214db0b7ac076bec8f321b7455338fc[m
+Author: Oscar Bermudez Garcia <obermudezg18@gmail.com>
+Date:   Fri Oct 7 13:50:15 2016 -0600
+
+    actualizacion1
+
+[33mcommit 039869196c7103bfe497a1bf4ee7f95e05118176[m
+Author: michelleaccr <michecj18@gmail.com>
+Date:   Tue Sep 13 06:43:45 2016 -0600
+
+    Parte de agregar cliente
+    
+    Agregar cliente php imec
+
+[33mcommit df6c8f4037fda9d9a73ab73569bae5d42e5d1db8[m
+Author: Oscar Bermudez Garcia <obermudezg18@gmail.com>
+Date:   Fri Sep 9 20:24:01 2016 -0600
+
+    actualizacion documentacion
+
+[33mcommit d68e72800fef3a2c2ae9b88f779f50f50cb690f7[m
+Author: michelleaccr <michecj18@gmail.com>
+Date:   Fri Sep 9 14:16:26 2016 -0600
+
+    Script Granja Villegas
+    
+    Script actualizado
+
+[33mcommit ddbf96b72dd9ff2c042e8f046f492f7bcfef6543[m
+Author: michelleaccr <michecj18@gmail.com>
+Date:   Fri Sep 9 14:01:49 2016 -0600
+
+    Script de base de datos
+    
+    Script de base de datos en mysql
+
+[33mcommit 55252f3ac500d037088653dbee28b872059e83ec[m
+Author: michelleaccr <michecj18@gmail.com>
+Date:   Tue Sep 6 13:30:55 2016 -0600
+
+    Casos de uso y contrato
+
+[33mcommit 68222d07c14d20b77ad6e5bf45e7f9b023c72ccc[m
+Author: Oscar Bermudez Garcia <obermudezg18@gmail.com>
+Date:   Tue Sep 6 12:40:13 2016 -0600
+
+    Actualizacon requerimientos no funcionales
+
+[33mcommit 92f4bf90bccf3447bd45077408f19ab03e4e25e0[m
+Author: Jose Villegas Mesen <fitovm.1395@gmail.com>
+Date:   Tue Sep 6 10:56:42 2016 -0600
+
+    Organizacion de casos de Uso
+    
+    Cree una carpeta correspondiente para los casos de uso
+
+[33mcommit 96fb107087a9b9bbd1473d6a7e6c4d59b83d56b8[m
+Author: JimmyMQ <jimmymq24@gmail.com>
+Date:   Mon Sep 5 21:36:26 2016 -0600
+
+    BitacoraJimmy
+
+[33mcommit b9106357fae405b95cc5c02033ec07cb5e81b1d2[m
+Author: JimmyMQ <jimmymq24@gmail.com>
+Date:   Mon Sep 5 20:57:05 2016 -0600
+
+    Casos de uso textual
+
+[33mcommit c405e2a12958a8765d8b0a3d8e5a219b816fb534[m
+Author: Oscar Bermudez Garcia <obermudezg18@gmail.com>
+Date:   Mon Sep 5 20:54:23 2016 -0600
+
+    Requerimientos No Funcionales
+
+[33mcommit c547495748e395c2fd7ec0ad4e31931d7be0de76[m
+Author: Oscar Bermudez Garcia <obermudezg18@gmail.com>
+Date:   Mon Sep 5 00:07:58 2016 -0600
+
+    Documentacion Granja Villegas
+
+[33mcommit 05eaa3a33ae22b026c3e894c68d63b6b704a6c98[m
+Author: rails new myapp <obermudezg18@gmail.com>
+Date:   Mon Sep 5 00:02:24 2016 -0600
+
+    Contrato
+
+[33mcommit 1d411911afae3352f9c919a947bf0e8f352abfc4[m
+Author: Jose Villegas Mesen <fitovm.1395@gmail.com>
+Date:   Sun Sep 4 23:58:20 2016 -0600
+
+    Agregación de bitacora Personal
+    
+    Adjunto mi bitacora personal
+
+[33mcommit e8ee0866613b38db9d49c6615871a4dc13a00c49[m
+Author: Jose Villegas Mesen <fitovm.1395@gmail.com>
+Date:   Sun Sep 4 23:51:37 2016 -0600
+
+    Diagramas de Dominio
+    
+    Adjunto los diagramas de dominio
+
+[33mcommit a852b3e4a5ae3fa827b0c1604cde77cf8add2cd3[m
+Author: Jose Villegas Mesen <fitovm.1395@gmail.com>
+Date:   Sun Sep 4 22:39:17 2016 -0600
+
+    Ordenamiento encarpetas
+    
+    Acomodo de diagramas
+
+[33mcommit 745dc41ec5113f179d7af26572711557538aba8d[m
+Author: Jose Villegas Mesen <fitovm.1395@gmail.com>
+Date:   Sun Sep 4 16:54:27 2016 -0600
+
+    Ordenamiento en carpetas
+    
+    Organización de jerarquias, en las carpetas correspondientes
+
+[33mcommit a538b371c6c4c275a0b558681d5f7c4b16d09271[m
+Author: Jose Villegas Mesen <fitovm.1395@gmail.com>
+Date:   Sun Sep 4 16:49:06 2016 -0600
+
+    Leer 2.0
+    
+    Version 2 de prueba
+
+[33mcommit 698bf929ceeeeddd00beacfadc2e0b3c55909e92[m
+Author: rails new myapp <obermudezg18@gmail.com>
+Date:   Fri Sep 2 14:36:29 2016 -0600
+
+    Diagrama caso de uso granja
+    
+    Granja VIllegas
+
+[33mcommit 2b7e256febef6a0f61f499376c61782cb515aa93[m
+Author: rails new myapp <obermudezg18@gmail.com>
+Date:   Fri Sep 2 13:55:40 2016 -0600
+
+    Documento de texto
+
+[33mcommit 5a6cc5ad5e3b6ebd574cde5b76d483da38c362f9[m
+Author: rails new myapp <obermudezg18@gmail.com>
+Date:   Fri Aug 26 16:31:44 2016 -0600
+
+    Cronograma
+
+[33mcommit 48aa004b65ef99c7e24461bad318b9f3524a3d79[m
+Author: michelleaccr <michecj18@gmail.com>
+Date:   Fri Aug 26 14:48:44 2016 -0600
+
+    Bitácora_Michelle
+    
+    Integrado al proyecto para mejora
