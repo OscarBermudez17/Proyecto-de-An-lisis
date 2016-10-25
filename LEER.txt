@@ -1,11 +1,13 @@
 hola mundo
 
 
-<<<<<<< HEAD
+HEAD
 Buenas tardes...
 
 
 :)
-=======
+:(
+)
+
 Buenas tardes... probandoo 222222222222222222222
->>>>>>> origin/master
+origin/master
