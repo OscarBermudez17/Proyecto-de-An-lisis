@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<project name="MiPrueba" default="build">
+  <phpunit codecoverage="true" haltonfailure="true" haltonerror="true">
+  <formatter type="clover" usefile="false"/>
+  <batchtest>
+    <fileset dir="src">
+      <include name="**/*Test*.php"/>
+    </fileset>
+  </batchtest>
+</phpunit>
+</project>
