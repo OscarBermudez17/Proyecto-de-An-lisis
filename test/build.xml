@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<project name="miAplicacion" default="build">
+  <property name="package" value="miAplicacion" override="true" />
+  <target name="clean">
+    <delete dir="reports"/>
+  </target>
+  <target name="prepare">
+    <mkdir dir="reports"/>
+    <mkdir dir="reports/logs"/>
+  </target>
+  <target name="phpunit">
+    <phpunit printsummary="true" haltonfailure="true" pharlocation="C:/xampp/php">
+      <formatter todir="reports/logs" type="xml"/>
+      <batchtest>
+        <fileset dir="C:/xampp/htdocs/PruebasUnitariasPHPUnit/PruebasUnitarias/">
+          <include name="*TddTests.php"/>
+        </fileset>
+      </batchtest>
+      <formatter type="xml" todir="reports" outfile="logfile.xml"/>
+   </phpunit>
+   <phpunitreport infile="reports/logfile.xml"
+                  styledir="C:/php/pear/data/phing/etc"
+                  format="frames"
+                  todir="reports"/>
+  </target>
+  <target name="build" depends="clean,prepare,phpunit"/>
+</project>
