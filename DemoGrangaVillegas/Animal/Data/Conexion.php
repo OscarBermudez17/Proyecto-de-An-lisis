@@ -1,7 +1,8 @@
 <?php
 
-    $host="localhost";
-    $user="root";
-    $pass="1234";
-    $db="granja_villegas";
+    $host="68.178.217.14";
+    $user="ucrgrupo3";
+    $pass="Rtva#Grupo#3";
+    $db="ucrgrupo3";
     ?>
+

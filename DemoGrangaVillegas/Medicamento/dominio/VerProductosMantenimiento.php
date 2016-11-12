@@ -11,6 +11,7 @@ and open the template in the editor.
          <meta name="description" content="">
         <meta name="viewport" content="width=divice-width, user-scalable=no, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0"/>
         <script src="prefix.js"></script>
+        <script src="../../Js/mensajesAlerta.js" type="text/javascript"></script>
         <link rel="stylesheet" href="../../css/estilos.css">
     </head>
     <body>
@@ -60,13 +61,15 @@ and open the template in the editor.
                     <a href="modificarProductoMantenimiento.php?id=<?php echo $row[0];?>">Modificar</a>
                 </td>
                 <td>
-                    <a href="../negocio/controlEliminarProductoMantenimiento.php?id=<?php echo $row[0];?>">Eliminar</a>
+     <input type="button" onclick="Confirmar('../negocio/controlEliminarProductoMantenimiento.php?id=<?php echo $row[0];?>', 'http://localhost:5000/DemoGrangaVillegas/Medicamento/Dominio/VerProductosMantenimiento.php')" value="Elminar" />
+
+                    
                 </td>
             </tr>
     
         <?php
-     
-        } 
+        
+         } 
         
         
         ?>

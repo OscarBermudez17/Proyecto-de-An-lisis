@@ -1,11 +1,27 @@
 <?xml version="1.0"?>
-<project name="MiPrueba" default="build">
-  <phpunit codecoverage="true" haltonfailure="true" haltonerror="true">
-  <formatter type="clover" usefile="false"/>
-  <batchtest>
-    <fileset dir="src">
-      <include name="**/*Test*.php"/>
-    </fileset>
-  </batchtest>
-</phpunit>
+<project name="miAplicacion" default="build">
+  <property name="package" value="MyApplication" override="true" />
+  <target name="clean">
+    <delete dir="reports"/>
+  </target>
+  <target name="prepare">
+    <mkdir dir="reports"/>
+    <mkdir dir="../reports/logs"/>
+  </target>
+  <target name="phpunit">
+    <phpunit printsummary="true" haltonfailure="true" pharlocation="C:/xampp/php/pear/PHPUnit">
+      <formatter todir="../reports/logs" type="xml"/>
+      <batchtest>
+        <fileset dir="../">
+          <include name="E:/Cosas_Oscar/UCR_2016_2_SEMESTRE/ANÁLISIS/Proyecto_Análisis/Proyecto_Granja_Villegas/PruebasUnitariasPHPUnit/TddTests.php"/>
+        </fileset>
+      </batchtest>
+      <formatter type="xml" todir="../reports" outfile="logfile.xml"/>
+   </phpunit>
+   <phpunitreport infile="../reports/logfile.xml"
+                  styledir="C:/php/pear/data/phing/etc"
+                  format="frames"
+                  todir="../reports"/>
+  </target>
+  <target name="build" depends="clean,prepare,phpunit"/>
 </project>

@@ -21,9 +21,12 @@ $nombre = $_POST['nombre'];
 $primerAp=$_POST['primerAp'];
 $segundoAp=$_POST['segundoAp'];
 $telefono = $_POST['telefono'];
+$telefono=intval(preg_replace('/[^0-9]+/', '', $telefono), 10);
 $correo = $_POST['correo'];
 $direccion = $_POST['direccion'];
-$cedula=(int)$_POST['cedula'];
+$cedula=$_POST['cedula'];
+$cedula=intval(preg_replace('/[^0-9]+/', '', $cedula), 10);
+               
 
 $conClase= new ClaseCon();
 $consulta="call actualizar_Cliente('$nombre','$primerAp','$segundoAp',$cedula,'$telefono','$correo','$direccion');";

@@ -6,6 +6,8 @@
          <meta name="description" content="">
         <meta name="viewport" content="width=divice-width, user-scalable=no, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0"/>
         <script src="prefix.js"></script>
+          <script src="../../Js/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <script src="../../Js/jquery.maskedinput-1.2.2.js" type="text/javascript"></script>
         <link rel="stylesheet" href="../../css/estilos.css">
         
     </head>
@@ -18,17 +20,18 @@
 <?php
  
 include('../Data/Database.php');
-include ('../Domino/Cliente.php');
-include ('../../Data/ClaseCon.php');
+require ('../Domino/Cliente.php');
+require ('../../Data/ClaseCon.php');
+require '../../Mascaras.php';
      
             if (isset($_GET['cedula']) ){
  
                
                 $cedula=$_GET['cedula'];
-               
+                
                     
-                $con=mysql_connect($host,$user,$pw) or die ("problemas al conectar");
-                mysql_select_db($db,$con)or die ("Problemas al conectar la bd");
+                //$con=mysql_connect($host,$user,$pw) or die ("problemas al conectar");
+               // mysql_select_db($db,$con)or die ("Problemas al conectar la bd");
 
                 $conClase= new ClaseCon();
              
@@ -62,10 +65,10 @@ include ('../../Data/ClaseCon.php');
             <input type = "text" name="segundoAp" size = "30" value="<?php echo $listaCliente[$x]->getSegundoAp()?>" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,64}" placeholder="Apellido, Solo recibe letras sin espacios " required><br>
             
             <br><label>Cédula</label>
-            <input type = "text" name="cedula" size = "30" value="<?php echo $listaCliente[$x]->getCedula();?>" readonly><br>
+            <input type = "text" name="cedula" id="cedula" size = "30" value="<?php echo mask($listaCliente[$x]->getCedula(),'#-####-####');?>" readonly><br>
             
             <br><label>Número de teléfono</label>
-            <input type = "text" name="telefono" size = "30" value=" <?php echo $listaCliente[$x]->getTelefono();?>" pattern="[1-9]{8}" placeholder="Ejemplo: 87654321" required><br>
+            <input type = "text" name="telefono" id="telefono" size = "30" value=" <?php echo mask($listaCliente[$x]->getTelefono(),'##-##-##-##');?>" placeholder="Ejemplo: 87-65-43-21" required><br>
             
             <br><label>Correo electrónico</label>
             <input type = "text" name="correo" size = "30" value="<?php echo $listaCliente[$x]->getCorreo();?>" placeholder="Ejemplo: user@granjafamvillegas.com"><br>
@@ -78,9 +81,16 @@ include ('../../Data/ClaseCon.php');
             <input type="reset"> 
              <br>
             
+                      <script>
+                            // Metodo para aplicar mascaras        
+                            jQuery(function ($) {
+                                $("#telefono").mask("99-99-99-99");
+                            });
+                        </script>
             
         </form>  
             </div>
+                  
     <?php
    
     }else{

@@ -9,11 +9,13 @@
 /**
  * Description of Valor
  *
- * @author oscar
+ * @author Jimmy
  */
 class Valor {
+   
   
- private  $user;
+  
+  private  $user;
  private $pass ;
  private $db ;
  private $host;
@@ -24,7 +26,8 @@ class Valor {
    $this-> user = "ucrgrupo3";
     $this->pass = "Rtva#Grupo#3";
    $this->db = "ucrgrupo3";
-   $this->host="68.178.217.14";   
+   $this->host="68.178.217.14"; 
+                
   }
           
   
@@ -64,3 +67,5 @@ class Valor {
 
    
 }
+
+

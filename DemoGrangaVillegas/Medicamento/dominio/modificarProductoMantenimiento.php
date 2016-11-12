@@ -1,5 +1,6 @@
 <?php
 
+
 require_once('../data/conexion.php');
 
     
@@ -22,10 +23,17 @@ require_once('../data/conexion.php');
     <head>
         <meta charset="UTF-8">
         <title>Actualizar medicamento</title>
+        <link rel="stylesheet" href="../../css/estilos.css">
     </head>
     
     <body>
-        
+        <div class="contenedor">
+            <?php include '../../Interfaz/header.php'; ?>    
+
+            <section class="main"> 
+                <div class="formulario">
+
+                    <center>
        
         <a><br><br>Actualizar medicamento</a>
         <form id="mProducto" name="mProducto" method="POST" action="../negocio/controlModificarProductoMedicamento.php">
@@ -59,6 +67,13 @@ require_once('../data/conexion.php');
            
         </form>
         
+         </center>
+                </div>
+            </section>
+        
+        <?php include '../../Interfaz/aside.php'; ?>
+            <?php include '../../Interfaz/footer.php'; ?>
+        </div>
         
     </body>
     

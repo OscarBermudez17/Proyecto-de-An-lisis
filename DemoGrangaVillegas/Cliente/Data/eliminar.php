@@ -23,14 +23,19 @@
 
 
             $cedula=$_GET['cedula'];
-            echo 'CEDULAAAAAAAAAAAAAA '.$cedula;
-            $stringSql="call eliminar_Cliente($cedula);";
+            echo 'CEDULAAAAAAAAAAAAAA     '.$cedula;
+            $stringSql="call eliminar_Cliente(".$cedula.");";
+            //SELECT  cedula_cliente FROM Factura WHERE cedula_cliente =cedulaC 
+            
+            //delete  from cliente where cedula=cedulaC;
+            
             $claseCon = new ClaseCon(); 
-            //('Juan','cedula','87789001','juan@hotmail.com','200 mts sur del parque Guapiles');
+            //('Juan','cedula','87789001','juan@hotmail.com,'200 mts sur del parque Guapiles');
 
             //$resultado=mysql_query("call eliminar_Cliente($cedula);",$con);
             //$resultado=consulta($stringSql);
             $resultado=$claseCon->consulta($stringSql);
+            echo  'Resultadoooo  '.$resultado;
             if($resultado!=null){
                  if(($r=mysql_fetch_array($resultado))!=null){
                     //$r=mysql_fetch_array($resultado);

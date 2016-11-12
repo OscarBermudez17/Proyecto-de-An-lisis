@@ -13,8 +13,8 @@ and open the template in the editor.
 	<footer>
 		<section class="links">
                     <a href="http://localhost:5000/DemoGrangaVillegas/Inicio.php">Inicio</a>
-                    <a href="#">*Facturación</a>
-                    <a href="http://localhost:5000/DemoGrangaVillegas/Lotepollos/InsertarLotePollos.php">Lote de pollos</a>
+                    <a href="http://localhost:5000/DemoGrangaVillegas/Facturas/FormFactura.php">Facturación</a>
+                    <a href="http://localhost:5000/DemoGrangaVillegas/Lotepollos/Forms/InsertarLotePollos.php">Lote de pollos</a>
                     <a href="http://localhost:5000/DemoGrangaVillegas/Cliente/Forms/verClientes.php">Clientes</a>
                     <a href="http://localhost:5000/DemoGrangaVillegas/Animal/Forms/BuscarAnimal.php">Animales</a>
               	</section>

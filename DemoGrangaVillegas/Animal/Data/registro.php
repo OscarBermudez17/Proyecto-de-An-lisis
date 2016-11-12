@@ -20,8 +20,8 @@ if (isset($_POST['date']) && !empty($_POST['date']) && isset($_POST['nombre'])) 
     echo 'tipo 2 ' . $tipo;
     $id_animal = $id_animal . $numeroGenerado;
 
-    $con = mysql_connect($host, $user, $pass) or die("problemas al conectar");
-    mysql_select_db($db, $con)or die("Problemas al conectar la bd");
+    //$con = mysql_connect($host, $user, $pass) or die("problemas al conectar");
+   // mysql_select_db($db, $con)or die("Problemas al conectar la bd");
 
     $consulta="call insertar_Animal('" . $ingreso . "','" . $sexo . "','" . $tipo . "','" . $id_animal . "','" . $proposito . "','" . $nombre . "','" . $raza . "');";
     $claseCon = new ClaseCon();

@@ -12,7 +12,9 @@ if(isset($_POST['nombre'])&& !empty($_POST['nombre'])
     $primerAp=$_POST['primerAp'];
     $segundoAp=$_POST['segundoAp'];
     $cedulaC = $_POST['cedula'];
+    $cedulaC=intval(preg_replace('/[^0-9]+/', '', $cedulaC), 10);
     $telefonoC = $_POST['telefono'];
+    $telefonoC=intval(preg_replace('/[^0-9]+/', '', $telefonoC), 10);
     $correoC = $_POST['correo'];
     $direccionC = $_POST['direccion'];
     try {

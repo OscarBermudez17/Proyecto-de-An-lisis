@@ -9,21 +9,23 @@
 /**
  * Description of ClaseCon
  *
- * @author oscar
- */ 
+ * @author Jimmy
+ */
 class ClaseCon {
-    //put your code here
+    
     function  consulta($consulta){
     
-      require ('Valor.php');
+        include  ('Valor.php');
      
      $dataValores = new Valor();
 
 
-echo 'Consulta ----->>  '.$consulta;
+//echo 'Consultas ----->>  '.$consulta;
 $con=mysql_connect($dataValores->getHost(),$dataValores->getUser(),$dataValores->getPass()) or die ("problemas al conectar");
  mysql_select_db($dataValores->getDb(),$con)or die ("Problemas al conectar la bd");
+
  $reutado=mysql_query($consulta,$con);
+ //echo 'Result     '.$reutado;
  mysql_close($con);
 return $reutado;  
 

@@ -15,7 +15,7 @@ require_once('../data/conexion.php');
 
 class imec {
     
- 
+  
 
  public function verProductos()
     {  

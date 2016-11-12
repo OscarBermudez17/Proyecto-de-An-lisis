@@ -12,7 +12,9 @@ and open the template in the editor.
         <meta name="description" content="">
         <meta name="viewport" content="width=divice-width, user-scalable=no, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0"/>
         <script src="prefix.js"></script>
+        <script src="../../Js/mensajesAlerta.js" type="text/javascript"></script>
         <link rel="stylesheet" href="../../css/estilos.css">
+        
     </head>
     <body>
         <div class="contenedor">
@@ -33,23 +35,30 @@ and open the template in the editor.
 
 
                         <?php
-                        // include ("../Data/Conexion.php");
+                        
+                        
                         include ("../Dominio/Animal.php");
-                        include ('../../Data/ClaseCon.php');
+                      
 
-                        // $con = mysql_connect($host, $user, $pass) or die("problemas al conectar");
-                        //mysql_select_db($db, $con)or die("Problemas al conectar la bd");
-                        //-----------------------OBTENER LISTA PARA COMBOS-------------------------------------------------------------------------------
                        
-                        $claseCon = new ClaseCon();
+                        //-----------------------OBTENER LISTA PARA COMBOS-------------------------------------------------------------------------------
+                        busqueda();
+                        function  busqueda(){
+                        include ("../Data/Conexion.php");
+                            
+                        $con = mysql_connect($host, $user, $pass) or die("problemas al conectar");
+                        mysql_select_db($db, $con)or die("Problemas al conectar la bd");
+                        //$claseCon = new ClaseCon();
                         $selectBusqueda = "select distinct tipo from animal;";
-                        //$resultado = mysql_query($selectBusqueda, $con);
-                        $resultado = $claseCon->consulta($selectBusqueda);
+                        $resultado = mysql_query($selectBusqueda, $con);
+                       // $resultado = $claseCon->consulta($selectBusqueda);
                         $listaTipo = array();
+                        
+                        
                         $x = 0;
                         ?>
 
-                        <!-- <form method="POST" action="#"> -->
+                        <form method="POST" action="BuscarAnimal.php">
                             <select name="TipoAnimal"> 
 
                                 <?php
@@ -68,20 +77,27 @@ and open the template in the editor.
 //---------------------------------------------------------------------------------------------------------------
                                 ?>            
                             </select>
-                            <input type="button" onclick="<?php buscarAnimales($claseCon,'Res');?>" value="Ver"/>
-                        <!--</form>-->
+                            
+                            <input type="submit"  value="Ver"/>
+                        </form>
 
                         <!-- ################################################################################################################## -->                                        
 
                         <?php
+                        }
                        
                         try {
                             if (isset($_POST['TipoAnimal'])) {
+                                echo 'Aquiiiiiii';
                                 $tipo = $_POST['TipoAnimal'];
-                                //buscarAnimales($claseCon, "Res");
+                                buscarAnimales($tipo);
                             } else {
-                                $tipo = 'Res';
-                               // buscarAnimales($claseCon, $tipo);
+                                echo 'Aquiiiiiii 22222222222222';
+                                if (isset($_POST['TipoAnimal'])) {
+                                    $tipo = 'Res';
+                                    buscarAnimales($tipo);
+                                }
+                                
                             }
                         } catch (ErrorException $e) {
                             echo 'No se ha buscado nada';
@@ -95,14 +111,14 @@ and open the template in the editor.
                         //$con2 = mysql_connect($host, $user, $pass) or die("problemas al conectar");
                         //mysql_select_db($db, $con2)or die("Problemas al conectar la bd");
 
-                        function buscarAnimales($claseCon,$tipoAnimal){
-                            
-                            echo 'Legassssssssssssssssssssssss ';
+                        function buscarAnimales($tipoAnimal){
+                              include ('../../Data/ClaseCon.php');
+                            echo 'Legassssssssssssssssssssssss '.$tipoAnimal;
                         
-                            //$claseCon=new ClaseCon();
+                            $claseCon = new ClaseCon();
                             //-----------------------OBTENER LISTA DE ANIMALES-------------------------------------------------------------------------------
                             $selectAnimales = "call buscar_animales('" . $tipoAnimal . "','');";
-
+                           
                             //$resultadoAnimales = mysql_query($selectAnimales, $con);
                             $resultadoAnimales = $claseCon->consulta($selectAnimales);
                             $listaAnimales = array();
@@ -137,7 +153,8 @@ and open the template in the editor.
                                                 <td> <?php echo $listaAnimales[$x]->getProposito(); ?></td>
                                                 <td> <?php echo $listaAnimales[$x]->getIdAnimal(); ?></td>
                                                 <td> <a href="EditarAnimal.php?id=<?php echo $listaAnimales[$x]->getIdAnimal(); ?>">Editar</a></td>
-                                                <td> <a href="../Data/EliminarAnimal.php?id=<?php echo $listaAnimales[$x]->getIdAnimal(); ?>">Eliminar</a></td>
+                                                <td><input type="button" onclick="Confirmar('../Data/EliminarAnimal.php?id=<?php echo $listaAnimales[$x]->getIdAnimal(); ?>', 'http://localhost:5000/DemoGrangaVillegas/Animal/Forms/BuscarAnimal.php')" value="Elminar" /></td>
+                                                <!--<td> <a href="../Data/EliminarAnimal.php?id=<?php// echo $listaAnimales[$x]->getIdAnimal(); ?>">Eliminar</a></td>-->
                                             </tr>
                                             <?php
                                             $x++;

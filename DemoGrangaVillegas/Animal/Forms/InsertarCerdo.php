@@ -4,6 +4,8 @@
         <link rel="stylesheet" href="../../css/estilos.css">
               <link rel="stylesheet" type="text/css" href="../../css/tcal.css" />
               <script type="text/javascript" src="../../Js/tcal.js"></script> 
+               <script src="../../Js/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <script src="../../Js/jquery.maskedinput-1.2.2.js" type="text/javascript"></script>
         <title>Insertar animal</title>
     </head>
     <body>
@@ -20,7 +22,7 @@
                         
                         <div>
                             <label for="fechaIngreso">Fecha de ingreso</label><br>
-                            <input type="date" id="date" name="date" class="tcal" value="<?php echo date("d")."/".date("m")."/".date("Y")?>" placeholder="Utilice el calendario" required /><br><br>
+                            <input type="date" id="date" name="date"   class="tcal" value="<?php echo date("d")."/".date("m")."/".date("Y")?>" placeholder="Utilice el calendario" required /><br><br>
                         </div>                        
                         
                         <div>
@@ -58,6 +60,15 @@
             		<input type="submit" name="insertar" value="Insertar Animal"title="Guardar">
                         <input type="reset"> 
                     </form>
+                    
+                    
+                            <script>
+                                // Metodo para aplicar mascaras        
+                                jQuery(function ($) {
+                                    $("#date").mask("99/99/9999");
+                                   
+                                });
+                            </script>                    
                     </center>
                 </div>
             </section>
